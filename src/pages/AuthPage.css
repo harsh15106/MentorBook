@@ -1,0 +1,93 @@
+/* src/pages/AuthPage.css */
+
+.auth-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--background-color, #f4f7f6);
+    padding: 2rem;
+}
+
+.auth-form-wrapper {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: var(--border-radius, 8px);
+    box-shadow: var(--box-shadow, 0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+    font-size: 2rem;
+    color: var(--color-dark, #343a40);
+}
+
+.auth-header p {
+    color: var(--color-secondary, #6c757d);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-form input,
+.auth-form select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius, 8px);
+    font-size: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row input {
+    width: 100%;
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--color-primary, #007BFF);
+    text-decoration: none;
+}
+
+.auth-button {
+    padding: 1rem;
+    background-color: var(--color-primary, #007BFF);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius, 8px);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: var(--color-primary-dark, #0056b3);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--color-secondary, #6c757d);
+}
+
+.auth-footer button {
+    background: none;
+    border: none;
+    color: var(--color-primary, #007BFF);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}

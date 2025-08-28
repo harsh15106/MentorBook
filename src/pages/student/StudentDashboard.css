@@ -1,0 +1,70 @@
+/* src/pages/student/StudentDashboard.css */
+
+/* Import the Lora font for the heading */
+
+
+/* --- Animation Keyframes --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- Main Layout --- */
+.student-dashboard-layout {
+  display: flex;
+  flex-direction: column; /* Stacks navbar on top of content */
+  width: 100%;
+  flex-grow: 1; 
+  background-color: var(--background-color);
+}
+
+
+.dashboard-main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: var(--background-color);
+  animation: fadeIn 0.5s ease-in-out; /* Apply fade-in to the content area */
+}
+
+/* --- Welcome Placeholder Styling --- */
+.welcome-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+.welcome-placeholder h1 {
+  color: var(--color-dark);
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  animation: slideUp 0.6s ease-out; /* Apply slide-up animation */
+}
+
+.welcome-placeholder p {
+  font-size: 1.1rem;
+  animation: slideUp 0.6s ease-out 0.1s; /* Apply slide-up with a slight delay */
+  animation-fill-mode: backwards; /* Ensures it starts invisible before animation begins */
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .dashboard-main-content {
+    padding: 1.5rem;
+    padding-bottom: 80px;
+  }
+  .welcome-placeholder h1 {
+    font-size: 2rem;
+  }
+}
+

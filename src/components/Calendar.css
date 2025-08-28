@@ -1,0 +1,106 @@
+/* src/components/Calendar.css */
+
+.calendar-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #e9ecef;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.month-year {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.nav-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--background-color);
+}
+
+.nav-button .material-symbols-outlined {
+  color: var(--color-secondary);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.day-of-week {
+  font-weight: 700;
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+  font-weight: 700;
+}
+
+.calendar-day:not(.empty):hover {
+  background-color: #f8f9fa;
+  color: var(--color-primary);
+}
+
+.calendar-day.today {
+  border: 2px solid var(--color-secondary);
+}
+
+.calendar-day.selected {
+  background-color: var(--color-primary);
+  color: white;
+  border: 2px solid var(--color-primary);
+}
+
+.calendar-day.empty {
+  cursor: default;
+}
+
+.calendar-day.disabled {
+  color: #adb5bd;
+  cursor: not-allowed;
+  text-decoration: line-through;
+  background-color: #f8f9fa;
+}
+
+.calendar-day.disabled:hover {
+  background-color: #f8f9fa;
+  color: #adb5bd;
+}
+
+/* --- EDIT: New style for today when it's also disabled --- */
+.calendar-day.today.disabled {
+  text-decoration: none; /* Remove the line-through for today */
+  border-color: #adb5bd; /* Use a faded border color */
+}

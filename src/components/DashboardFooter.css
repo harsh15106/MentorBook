@@ -1,0 +1,104 @@
+/* src/components/DashboardFooter.css */
+
+.dashboard-footer {
+    background-color: var(--color-dark, #343a40);
+    color: #a9a9a9;
+    padding: 3rem 2rem 0;
+    font-family: var(--font-primary, 'Lato', sans-serif);
+    
+    /* --- EDIT: Make the footer fixed at the bottom --- */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+.dashboard-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* --- EDIT: Added styles from PublicFooter --- */
+.footer-about, .footer-links, .footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-about h3 span {
+    font-weight: 500;
+    color: var(--color-primary, #007BFF);
+}
+
+.footer-about p {
+    line-height: 1.7;
+}
+
+.footer-links h4, .footer-social h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-links h4::after, .footer-social h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary, #007BFF);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+/* --- End of added styles --- */
+
+
+.dashboard-footer-links a {
+    color: #a9a9a9;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.dashboard-footer-links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #4a4a4a;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard-footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links h4::after, .footer-social h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

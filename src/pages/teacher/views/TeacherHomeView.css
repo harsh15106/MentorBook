@@ -1,0 +1,140 @@
+/* src/pages/teacher/views/TeacherHomeView.css */
+
+/* --- Main View Container --- */
+.dashboard-view {
+    padding: 2rem;
+    background-color: #f8f9fa; /* A light grey background for the content area */
+    height: 100%;
+}
+
+.dashboard-view h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-view p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+/* --- Summary Cards --- */
+.summary-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.summary-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+    background-color: #e9ecef;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon .material-symbols-outlined {
+    font-size: 24px;
+    color: #495057;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.card-title {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* --- Appointments List --- */
+.appointments-list-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.appointments-list-container h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+}
+
+.appointments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.appointment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.appointment-item:hover {
+    background-color: #f8f9fa;
+}
+
+.appointment-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-subject {
+    font-weight: 600;
+    color: #495057;
+}
+
+.appointment-teacher { /* Reusing class, but contextually it's the student name */
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.appointment-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #495057;
+    background-color: #e9ecef;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}

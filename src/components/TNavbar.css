@@ -1,0 +1,216 @@
+/* src/components/TNavbar.css */
+
+/* --- Desktop Styles (Default) --- */
+.horizontal-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-logo h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: var(--color-dark);
+  font-family: 'Lora', serif;
+}
+
+.navbar-logo h2 span {
+  color: var(--color-primary);
+}
+
+.navbar-links {
+  flex-grow: 1;
+}
+
+.navbar-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #f8f9fa;
+  color: var(--color-primary);
+}
+
+.navbar-links a.active {
+  background-image: linear-gradient(45deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.navbar-links a.active .material-symbols-outlined {
+  color: white;
+}
+
+/* Styles for the profile item on desktop */
+.navbar-profile-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 0.6rem 1rem; /* Added padding for consistency */
+  border-radius: var(--border-radius);
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.navbar-pfp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar-profile-item:hover .profile-avatar {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Hide the text label for the profile on desktop */
+.navbar-profile-item .nav-label {
+    display: none;
+}
+
+/* --- Mobile & Tablet Redesign (max-width: 768px) --- */
+@media (max-width: 768px) {
+  /* Hide desktop-only elements */
+  .navbar-logo {
+    display: none;
+  }
+
+  /* Transform the header into a fixed bottom bar */
+  .horizontal-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    border-top: 1px solid #e9ecef;
+    border-bottom: none;
+    padding: 0.5rem 0;
+    z-index: 1001; /* --- EDIT: Ensure navbar is above other content --- */
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  /* Style the links for a bottom tab bar */
+  .navbar-links a, .navbar-profile-item {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+  }
+
+  .navbar-links a .material-symbols-outlined {
+    font-size: 1.6rem;
+  }
+
+  .nav-label {
+    display: block;
+  }
+  
+  .navbar-links a.active {
+    transform: none;
+    box-shadow: none;
+    background: none;
+    color: var(--color-primary);
+  }
+  
+  .navbar-links a.active .material-symbols-outlined {
+    color: var(--color-primary);
+  }
+  
+  .navbar-profile-item .profile-avatar {
+    width: 26px;
+    height: 26px;
+    font-size: 0.9rem;
+  }
+
+  /* Show the profile label on mobile */
+  .navbar-profile-item .nav-label {
+      display: block;
+  }
+}
+/* src/pages/teacher/TeacherDashboard.css */
+
+.teacher-dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--background-color, #f4f7f6);
+}
+
+.dashboard-main-content {
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-y: auto; /* Allow vertical scrolling for content */
+}
+
+/* A general style for all views within the dashboard for consistent padding */
+.dashboard-view {
+  padding: 1rem;
+}
+
+.loading-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .dashboard-main-content {
+    padding: 1rem;
+    /* --- FIX: Add padding to the bottom to make space for the fixed navbar --- */
+    /* Adjust the value (e.g., 70px) to match your navbar's height */
+    padding-bottom: 70px;
+  }
+}

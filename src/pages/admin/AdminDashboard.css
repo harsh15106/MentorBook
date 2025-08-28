@@ -1,0 +1,115 @@
+/* src/pages/admin/AdminDashboard.css */
+
+.admin-dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background-color, #f4f7f6);
+}
+
+.admin-sidebar {
+    width: 250px;
+    background-color: var(--color-dark, #343a40);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sidebar-header h3 {
+    margin: 0 0 2rem 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom: 1rem;
+}
+
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-nav button {
+    background: transparent;
+    border: none;
+    color: #a9a9a9;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--border-radius, 8px);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.admin-nav button:hover {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.admin-main-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+/* src/pages/admin/views/AddTeacherView.css */
+
+.add-teacher-view {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.add-teacher-view h1 {
+    font-size: 2rem;
+    color: var(--color-dark);
+}
+
+.add-teacher-form {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.add-teacher-form input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius, 8px);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row input {
+    width: 100%;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.form-error { color: var(--color-danger); text-align: center; margin-bottom: 1rem; }
+.form-success { color: #28a745; text-align: center; margin-bottom: 1rem; }

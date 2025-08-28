@@ -1,0 +1,36 @@
+.debug-container {
+  padding: 2rem;
+  font-family: monospace;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.debug-section {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.debug-section h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.success { color: #28a745; font-weight: bold; }
+.error { color: var(--color-danger); font-weight: bold; }
+.loading { color: var(--color-secondary); font-weight: bold; }
+.no-data { color: var(--color-secondary); }
+
+.raw-data {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  white-space: pre-wrap; /* Allows the text to wrap */
+  word-wrap: break-word;
+  max-height: 400px;
+  overflow-y: auto;
+}

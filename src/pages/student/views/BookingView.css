@@ -1,0 +1,234 @@
+/* src/pages/student/views/BookingView.css */
+
+.booking-view-container {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.booking-view-container h1 {
+  margin-top: 0;
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr; 
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* --- New Faculty Info Card --- */
+.faculty-info-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #e9ecef;
+}
+
+.faculty-info-card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+}
+
+.faculty-info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.faculty-info-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-secondary);
+}
+
+/* --- Time Slots Section --- */
+.time-slots-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #e9ecef;
+}
+
+/* This is a general rule for all h2s in the container, which we will override */
+.time-slots-container h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* FIX: Style for the date subtitle */
+.selected-date-display {
+  color: var(--color-secondary);
+  font-weight: 700;
+  margin-top: -0.75rem; /* Pulls it closer to the title above */
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem; /* Creates space below */
+  border-bottom: 1px solid #eee; /* Groups the title and subtitle together */
+  font-size: 0.9rem; /* Makes it look like a subtitle */
+}
+
+/* --- New Subject Select --- */
+.section-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+/* FIX: Remove the bottom border from section titles that have a subtitle below them */
+.section-title + .selected-date-display {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.selected-date-display{
+    margin-top: 1rem;
+}
+
+.time-slots-container .section-title:first-of-type {
+    margin-top: 0;
+}
+
+.subject-select-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.subject-select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: #ffffff;
+    appearance: none; /* Removes default system appearance */
+    cursor: pointer;
+}
+
+/* --- Time Slots Grid --- */
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.time-slot-button {
+  padding: 0.75rem;
+  border: 1px solid #e9ecef;
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot-button:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.time-slot-button.active {
+  background-color: var(--color-primary);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.time-slot-button:disabled {
+  background-color: #f8f9fa;
+  color: #adb5bd;
+  cursor: not-allowed;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* --- Meeting Type Section --- */
+.meeting-type-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.meeting-type-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    background-color: #f8f9fa;
+    color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.meeting-type-button:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.meeting-type-button.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* --- Booking Summary --- */
+.booking-summary {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.confirm-booking-button {
+  padding: 0.85rem 2.5rem;
+  background-image: linear-gradient(45deg, #28a745, #218838);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.confirm-booking-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+.confirm-booking-button:disabled {
+  background-image: none;
+  background-color: var(--color-secondary);
+  cursor: not-allowed;
+}
+
+@media (max-width: 992px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  .calendar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

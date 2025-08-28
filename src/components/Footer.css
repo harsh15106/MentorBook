@@ -1,0 +1,123 @@
+/* src/components/Footer.css */
+
+.site-footer {
+    background-color: var(--color-dark, #343a40);
+    color: #a9a9a9;
+    padding: 3rem 2rem 0;
+    font-family: var(--font-primary, 'Lato', sans-serif);
+    /* This allows the footer to shrink if needed, but not grow */
+    flex-shrink: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.footer-about, .footer-links, .footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-about h3 span {
+    font-weight: 500;
+    color: var(--color-primary, #007BFF);
+}
+
+.footer-about p {
+    line-height: 1.7;
+}
+
+.footer-links h4, .footer-social h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-links h4::after, .footer-social h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary, #007BFF);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #a9a9a9;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-primary, #007BFF);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #4a4a4a;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links h4::after, .footer-social h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}

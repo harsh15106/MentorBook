@@ -1,0 +1,61 @@
+/* src/pages/admin/views/ViewTeachersView.css */
+
+.view-teachers-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.view-teachers-container h1 {
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-top: 0;
+}
+
+.view-teachers-container p {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.teacher-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Make table scrollable on small screens */
+}
+
+.teacher-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.teacher-table th, 
+.teacher-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.teacher-table th {
+    background-color: #f8f9fa;
+    font-weight: 700;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.teacher-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.loading-message,
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+}

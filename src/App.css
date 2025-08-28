@@ -1,0 +1,30 @@
+/* src/App.css */
+
+/* This ensures the root elements can stretch to the full viewport height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* This creates the main flex container for the sticky footer layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* This tells the main content area to grow and take up any available space */
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* Your other global styles */
+.loading-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}

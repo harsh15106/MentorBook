@@ -1,0 +1,52 @@
+/* src/pages/teacher/TeacherDashboard.css */
+
+
+.teacher-dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* --- FIX: This prevents any horizontal overflow --- */
+  overflow-x: hidden;
+  background-color: var(--background-color, #f4f7f6);
+}
+
+.dashboard-main-content {
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-y: auto; /* Allow vertical scrolling for content */
+}
+
+/* A general style for all views within the dashboard for consistent padding */
+.dashboard-view {
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 1rem;
+}
+
+.loading-fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+.dashboard-view h1 {
+  color: var(--color-dark);
+  font-size: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-view p {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main-content {
+    padding: 1rem;
+    padding-bottom: 80px; /* Space for mobile nav */
+  }
+}
