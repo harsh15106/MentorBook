@@ -8,7 +8,8 @@
   background-color: #ffffff;
   border: 1px solid #e9ecef;
   border-radius: var(--border-radius);
-  overflow:hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 
